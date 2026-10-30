@@ -7,3 +7,6 @@ cmake-build-*/
 *.obj
 *.exe
 .DS_Store
+
+# Generated Emscripten site
+dist/
