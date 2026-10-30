@@ -32,7 +32,7 @@ jobs:
         run: |
           mkdir -p dist
           em++ -std=c++17 -O2 -Isrc src/game.cpp src/web_bridge.cpp \
-            --bind -s NO_ENTRY=1 -s MODULARIZE=1 -s EXPORT_ES6=1 -s ENVIRONMENT=web \
+            --bind --no-entry -s MODULARIZE=1 -s EXPORT_ES6=1 -s ENVIRONMENT=web \
             -s FILESYSTEM=0 -s ALLOW_MEMORY_GROWTH=1 -s ASSERTIONS=0 \
             -o dist/echovault.mjs
           cp web/index.html web/styles.css web/game.js dist/
